@@ -1,0 +1,16 @@
+# Caches e arquivos temporários do Python e Jupyter Notebook
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Ambientes virtuais
+.venv/
+env/
+venv/
+
+# Arquivos do sistema operacional e do VS Code
+.DS_Store
+Thumbs.db
+.vscode/
+*.tmp

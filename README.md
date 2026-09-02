@@ -117,17 +117,17 @@ Para garantir a acurácia dos dados sem alterar os arquivos brutos da camada Gol
    * Seleção das colunas `total_custeio_contratado`, `taxa_inadimplencia_referencia_bcb` e `taxa_selic_mensal`.
     * Aplicação manual de: **Tipo de Dados: Número Decimal** -> **Localidade: Inglês (Estados Unidos)** (`en-US`).
    * Expressão aplicada:
-     ```powerquery
-     Table.TransformColumnTypes(
-         #"Cabeçalhos Promovidos",
-         {
-             {"total_custeio_contratado", type number},
-             {"taxa_inadimplencia_referencia_bcb", type number},
-             {"taxa_selic_mensal", type number}
-         },
-         "en-US"
-     )
-     ```
+  ```powerquery
+  Table.TransformColumnTypes(
+    #"Cabeçalhos Promovidos",
+    {
+      {"total_custeio_contratado", type number},
+      {"taxa_inadimplencia_referencia_bcb", type number},
+      {"taxa_selic_mensal", type number}
+    },
+    "en-US"
+  )
+  ```
 
 3. **Tipagem Estrita de Chaves e Contagens:**
     * `fk_regiao`, `fk_cultura`, `total_contratos` -> Número Inteiro (`Int64.Type`).
@@ -213,16 +213,16 @@ Para garantir performance analítica, governança de regras de negócio e evitar
 #### Medidas Principais
 Métrica fundamental que agrega o montante financeiro bruto liberado aos produtores rurais.
 * **Expressão DAX:**
-  ```dax
-  Total Custeio Concedido = SUM(fato_custeio_risco_regional_rs[total_custeio_contratado])
+```dax
+Total Custeio Concedido = SUM(fato_custeio_risco_regional_rs[total_custeio_contratado])
 
-  Total Contratos = SUM(fato_custeio_risco_regional_rs[total_contratos])
+Total Contratos = SUM(fato_custeio_risco_regional_rs[total_contratos])
 
-  Ticket Medio Concessao = DIVIDE([Total Custeio Concedido], [Total Contratos], 0)
+Ticket Medio Concessao = DIVIDE([Total Custeio Concedido], [Total Contratos], 0)
 
-  Taxa Media Inadimplencia BCB = AVERAGE(fato_custeio_risco_regional_rs[taxa_inadimplencia_referencia_bcb])
+Taxa Media Inadimplencia BCB = AVERAGE(fato_custeio_risco_regional_rs[taxa_inadimplencia_referencia_bcb])
 
-  Volume Risco Climatico =
+Volume Risco Climatico =
 CALCULATE(
     [Total Custeio Concedido],
     fato_custeio_risco_regional_rs[diagnostico_causa_risco] IN {

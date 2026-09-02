@@ -9,6 +9,10 @@ __pycache__/
 env/
 venv/
 
+# Temporários do Power BI e Office
+.~*.pbix
+*.tmp
+
 # Arquivos do sistema operacional e do VS Code
 .DS_Store
 Thumbs.db

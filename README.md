@@ -373,10 +373,10 @@ A distribuição das concessões revela forte concentração de risco setorial n
 ### 4. Possíveis Aplicações para Crédito e Risco
 
 1. **Provisão e garantias:**
-    * Avaliar critérios diferenciados de provisão e garantias para regiões com exposição superior a 25%, como Vales do Rio Pardo e Alto Jacuí, com validação pelas políticas da instituição financeira.
+    * Avaliar critérios diferenciados de provisão e garantias para regiões com exposição superior a 25%, como Vales do Rio Pardo e Alto Jacuí, com validação pelas políticas da instituição financeira;
 2. **Seguro rural:**
-    * Considerar a vinculação de seguro rural, como Proagro ou apólices privadas, em operações de soja e milho com maior exposição histórica à estiagem.
+    * Considerar a vinculação de seguro rural, como Proagro ou apólices privadas, em operações de soja e milho com maior exposição histórica à estiagem
 3. **Mecanismos de carência e proteção financeira:**
-    * Avaliar CPRs com cláusulas de prorrogação previamente definidas e acionadas conforme critérios formais de calamidade pública.
+    * Avaliar CPRs com cláusulas de prorrogação previamente definidas e acionadas conforme critérios formais de calamidade pública;
 4. **Governança Contínua dos Dados no Databricks:**
    * Manter a execução recorrente do pipeline Medallion a cada fechamento de mês agrícola, permitindo o rastreamento antecipado de migrações de safras e curvas de atraso de pagamento antes do vencimento do crédito.
